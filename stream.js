@@ -19,10 +19,10 @@ const opts = {
 }
 
 let readable = fs.createReadStream(file_read)
-//  .on('data', handleData)
-//  .on('end', () => console.log('The data has been completely consumed.'))
-//  .on('close', () => console.log('The stream has closed.'))
-//  .on('error', err => console.log('There was an error!', err))
+  .on('data', handleData)
+  .on('end', () => console.log('The data has been completely consumed.'))
+  .on('close', () => console.log('The stream has closed.'))
+  .on('error', err => console.log('There was an error!', err))
             
 let writable = fs.createWriteStream(file_write);
 
